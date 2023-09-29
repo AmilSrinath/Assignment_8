@@ -35,15 +35,15 @@
 </head>
 <body>
     <h2>A</h2>
-    <img src="assest/icons8-walking.gif">
+    <img src="">
     <h2>B</h2>
-    <img src="assest/icons8-walking.gif">
+    <img src="">
     <h2>C</h2>
-    <img src="assest/icons8-walking.gif">
+    <img src="">
     <h2>D</h2>
-    <img src="assest/icons8-walking.gif">
+    <img src="">
     <h2>E</h2>
-    <img src="assest/icons8-walking.gif">
+    <img src="">
     <h2>F</h2>
 
     <button type="button">Start</button>
@@ -113,12 +113,24 @@
         $("button").eq(0).on('click', () => {
             if (interval===null) {
                 interval = setInterval(letterChange1, 1500);
+                $("img").eq(0).attr("src","assest/icons8-walking.gif");
+                $("img").eq(1).attr("src","assest/icons8-walking.gif");
+                $("img").eq(2).attr("src","assest/icons8-walking.gif");
+                $("img").eq(3).attr("src","assest/icons8-walking.gif");
+                $("img").eq(4).attr("src","assest/icons8-walking.gif");
+                $("img").eq(5).attr("src","assest/icons8-walking.gif");
             }
         });
 
         $("button").eq(1).on('click', () => {
             clearInterval(interval);
             interval=null
+            $("img").eq(0).attr("src","assest/icons8-walking-50.png");
+            $("img").eq(1).attr("src","assest/icons8-walking-50.png");
+            $("img").eq(2).attr("src","assest/icons8-walking-50.png");
+            $("img").eq(3).attr("src","assest/icons8-walking-50.png");
+            $("img").eq(4).attr("src","assest/icons8-walking-50.png");
+            $("img").eq(5).attr("src","assest/icons8-walking-50.png");
         });
     </script>
 </body>
