@@ -15,20 +15,68 @@
 </head>
 <body>
     <h2>A</h2>
-    <h2>#</h2>
-    <h2>#</h2>
-    <h2>#</h2>
-    <h2>#</h2>
-    <h2>#</h2>
+    <h2>B</h2>
+    <h2>C</h2>
+    <h2>D</h2>
+    <h2>E</h2>
+    <h2>F</h2>
 
     <script src="assest/lib/jquery.min.js"></script>
     <script>
         let ValueA=0;
+        let ValueB=0;
+        let ValueC=0;
+        let ValueD=0;
+        let ValueE=0;
+        let ValueF=0;
         const letterChange1 = () =>{
             if (ValueA<5){
                 $("h2").eq(ValueA+1).text("A");
-                $("h2").eq(ValueA).text("#");
                 ValueA++;
+                if (ValueA===5){
+                    ValueA=-1;
+                }
+            }
+
+            if (ValueB<5){
+                $("h2").eq(ValueB+2).text("B");
+                ValueB++;
+                if (ValueB===4){
+                    ValueB=-2;
+                }
+            }
+
+            if (ValueC<5){
+                $("h2").eq(ValueC+3).text("C");
+                ValueC++;
+                if (ValueC===3){
+                    ValueC=-3;
+                }
+            }
+
+            if (ValueD<5){
+                $("h2").eq(ValueD+4).text("D");
+                ValueD++;
+                if (ValueD===2){
+                    ValueD=-4;
+                }
+            }
+
+            if (ValueE<5){
+                $("h2").eq(ValueE+5).text("E");
+                ValueE++;
+                if (ValueE===1){
+                    ValueE=-5;
+                }
+            }
+
+            if (ValueF<6){
+                $("h2").eq(ValueF).text("F");
+                ValueF++;
+                if (ValueF===6){
+                    ValueF=-6;
+                }
+                console.log(ValueF)
             }
         }
         setInterval(letterChange1,1000);
