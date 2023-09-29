@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 08</title>
+
+    <style>
+        h2{
+            position: relative;
+            display: inline-block;
+            padding: 0 75px 0 75px;
+            top: 400px;
+        }
+    </style>
 </head>
 <body>
+    <h2>A</h2>
+    <h2>#</h2>
+    <h2>#</h2>
+    <h2>#</h2>
+    <h2>#</h2>
+    <h2>#</h2>
 
+    <script src="assest/lib/jquery.min.js"></script>
+    <script>
+        let ValueA=0;
+        const letterChange1 = () =>{
+            if (ValueA<5){
+                $("h2").eq(ValueA+1).text("A");
+                $("h2").eq(ValueA).text("#");
+                ValueA++;
+            }
+        }
+        setInterval(letterChange1,1000);
+    </script>
 </body>
 </html>
